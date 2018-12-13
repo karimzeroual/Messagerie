@@ -1,0 +1,27 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+Sub Application_OnStart() 
+	
+   'Application("PCSQLSERVER") = "Provider=SQLOLEDB.1;Data Source=MRKARIM;Initial Catalog="& Database &";User ID=sa; Password=maroc123" 
+   'Application("PCSQLSERVER") = "Provider=SQLNCLI10.1;User Id=sa; Password=maroc123;Initial Catalog=Messagerie;Data Source=MRKARIM;"
+    Application("PCSQLSERVER") = "Driver={SQL Server};Server=MRKARIM\SQLEXPRESS;Database=Messagerie;Uid=sa;Pwd=maroc123"
+
+     dim TabCol(3)
+	 TabCol(0) = "#FFCC66"
+     TabCol(1) = "#CCCCAA" 
+     TabCol(2) = "#ABAB80"
+     TabCol(3) = "#FFA5BB" 
+	 
+  Application("TabCol") = TabCol
+	 
+End Sub
+
+Sub Session_OnStart() 
+  'Application("NV") = Application("NV") + 1
+End Sub
+
+Sub Session_OnEnd() 
+  'Application("NV") = Application("NV") - 1
+End Sub
+</SCRIPT>
+  
+
